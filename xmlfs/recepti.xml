@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="recepti.xsl"?>
+<recepti:recepti xmlns:recepti="http://www.example.org/recepti" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/recepti recepti.xsd ">
+  <recepti:proizvod naziv="Hleb" operacija="heat" opparam="9.5">
+  	<recepti:komentar>recepti:komentar</recepti:komentar>
+  	  		
+  	<recepti:proizvod naziv="Korak1" operacija="mix">
+  	
+  		 	
+		<recepti:proizvod naziv="oil" kolicina="78.0" jedinica="ml"></recepti:proizvod>
+ 		<recepti:proizvod naziv="flour" jedinica="g" kolicina="360.0"></recepti:proizvod>
+		<recepti:proizvod naziv="baking powder" jedinica="tbsp" kolicina="1.0"></recepti:proizvod>
+ 		<recepti:proizvod naziv="salt" jedinica="tsp" kolicina="1.0"></recepti:proizvod>
+ 		<recepti:proizvod naziv="water" jedinica="cup" kolicina="1.0"></recepti:proizvod> 	
+  	
+  	
+  	</recepti:proizvod>
+  	
+  	
+  	
+  </recepti:proizvod>
+  
+  <recepti:proizvod naziv="Onion rings" operacija="heat" opparam="9.5">
+  	<recepti:komentar>Careful-hot-oil</recepti:komentar>
+  	
+  	
+  	
+  	<recepti:proizvod naziv="Korak1" operacija="deepfry">
+  	
+  		<recepti:proizvod naziv="battered-rings"  operacija="dip">
+  	
+  	
+  	  		
+  	<recepti:proizvod naziv="batter" operacija="mix">
+  		<recepti:proizvod naziv="batter-base" operacija="whisk">
+  			<recepti:proizvod naziv="sr-flour" jedinica="g" kolicina="150.0"></recepti:proizvod>
+  			<recepti:proizvod naziv="sparkling water" jedinica="ml" kolicina="100.0"></recepti:proizvod>  			
+  		</recepti:proizvod>  			
+  		
+  		<recepti:proizvod naziv="chives" jedinica="g" kolicina="45.0"></recepti:proizvod>
+  		<recepti:proizvod naziv="turmeric" jedinica="tsp" kolicina="0.5"></recepti:proizvod>  		
+   	</recepti:proizvod>
+   	
+   	
+   	
+   	<recepti:proizvod naziv="red-onion" jedinica="piece" kolicina="1.0">
+   		<recepti:komentar>Sliced and peeled</recepti:komentar>
+   	</recepti:proizvod>  	
+  	
+  	</recepti:proizvod>
+  	
+  	
+  	</recepti:proizvod>
+  	
+  	
+  	
+  	<recepti:proizvod naziv="sizzling oil" operacija="heat">
+   		<recepti:proizvod naziv="oil" kolicina="300.0" jedinica="ml"></recepti:proizvod>   	
+   	</recepti:proizvod>
+   	
+  	<recepti:proizvod naziv="sea-salt" jedinica="tsp" kolicina="0.5"></recepti:proizvod>
+  </recepti:proizvod>
+  	
+  	
+  	
+  
+  
+  	
+  	
+
+
+</recepti:recepti>

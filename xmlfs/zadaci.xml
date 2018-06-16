@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zadatak:zadaci xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zadatak="http://www.example.org/zadatak" xsi:schemaLocation="http://www.example.org/zadatak zadatak.xsd ">
+	<zadatak:zadatak>
+		<zadatak:opis>zadatak:opis</zadatak:opis>
+	</zadatak:zadatak></zadatak:zadaci>

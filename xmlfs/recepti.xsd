@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/recepti" xmlns:tns="http://www.example.org/recepti" elementFormDefault="qualified">
+
+    <complexType name="recepti">
+    	<sequence>
+    		<element name="proizvod" type="tns:proizvod" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+    
+
+
+
+
+    <element name="recepti" type="tns:recepti"></element>
+    
+
+
+    <complexType name="proizvod">
+    	<sequence>
+    		<element name="komentar" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="proizvod" type="tns:proizvod"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    	</sequence>
+    	<attribute name="naziv" type="string" use="required"></attribute>
+    	<attribute name="tindeks" type="int"></attribute>
+    	<attribute name="prelazni" type="boolean"></attribute>
+    	<attribute name="operacija" type="tns:operacija"></attribute>
+    	<attributeGroup ref="tns:PocetniSastojak"></attributeGroup>
+    	<attribute name="optip" type="string"></attribute>
+    	<attribute name="opparam" type="float">
+    		<annotation>
+    			<documentation>opparam
+
+floating-point ratio of temperature to time of thermic process</documentation>
+    		</annotation></attribute>
+    </complexType>
+
+    <simpleType name="kolicina">
+    	<restriction base="float"></restriction>
+    </simpleType>
+
+    <simpleType name="jedinica">
+    	<restriction base="NMTOKEN">
+    		<enumeration value="kg"></enumeration>
+    		<enumeration value="tsp"></enumeration>
+    		<enumeration value="tbsp"></enumeration>
+    		<enumeration value="l"></enumeration>
+    		<enumeration value="ml"></enumeration>
+    		<enumeration value="g"></enumeration>
+    		<enumeration value="cup"></enumeration>
+    		<enumeration value="oz"></enumeration>
+    		<enumeration value="serving"></enumeration>
+    		<enumeration value="piece"></enumeration>
+    	</restriction>
+    </simpleType>
+
+
+
+
+
+
+    <simpleType name="operacija">
+    	<restriction base="NMTOKEN">
+    		<enumeration value="heat"></enumeration>
+    		<enumeration value="whisk"></enumeration>
+    		<enumeration value="mix"></enumeration>
+    		<enumeration value="dip"></enumeration>
+    		<enumeration value="deepfry"></enumeration>
+    	</restriction>
+    </simpleType>
+
+    <attributeGroup name="PocetniSastojak">
+    	<attribute name="jedinica" type="tns:jedinica"></attribute>
+    	<attribute name="kolicina" type="tns:kolicina"></attribute>
+    </attributeGroup>
+</schema>

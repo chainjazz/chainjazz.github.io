@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/zadatak" xmlns:tns="http://www.example.org/zadatak" elementFormDefault="qualified">
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+    <complexType name="zadatak">
+    	<sequence>
+    		<element name="opis" maxOccurs="1" minOccurs="1">
+    			<simpleType>
+    				<restriction base="string">
+    					<minLength value="0"></minLength>
+    					<maxLength value="255"></maxLength>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="komentar" type="string" maxOccurs="unbounded"
+    			minOccurs="0">
+    		</element>
+    		<element name="prilog" type="anyURI" maxOccurs="unbounded"
+    			minOccurs="0">
+    		</element>
+    		<element ref="tns:zadatak" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    	<attribute name="rok" type="dateTime"></attribute>
+    	<attribute name="status" type="int"></attribute>
+    	<attribute name="vaznost" type="int"></attribute>
+    </complexType>
+
+    <complexType name="zadaci">
+    	<sequence>
+    		<element ref="tns:zadatak" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="zadaci" type="tns:zadaci"></element>
+
+    <element name="zadatak" type="tns:zadatak"></element>
+</schema>
