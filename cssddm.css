@@ -1,0 +1,107 @@
+﻿/********************\
+*	DROPDOWN MENU
+\********************/
+
+#navstrip {
+	clear:both; /**/
+	z-index:20; /**/
+	width:960px;
+	left:0;
+	height:40px;
+	font-weight:600;
+	font-size:1em;
+	margin-left:0;
+	padding-left:0;	
+	position:relative;
+}
+
+UL.cssddmenu {
+	padding:0px;
+	margin: 0px;
+}
+
+ul.cssddmenu * { /* ALL CHILDREN: reset cascading/default values */
+	padding:0px;
+	margin:0px;
+	text-decoration:none;
+}
+
+/* ITEM CONTAINERS */
+
+ul.cssddmenu li { 
+	float:left;
+	width:10em; /**/
+	height:36px;
+	margin:0px;
+	background-color:#FFDDDD;
+	border-top: 1px #aaaaaa solid;		
+	padding-left: 0em;
+	list-style-type: none;
+	list-style-position: inside;	
+}
+
+ul.cssddmenu li.nest {
+	float:left; /**/	
+	padding:0px;
+	cursor:pointer;
+	background-color:#FFAAAA
+}
+
+ul.cssddmenu li ul li {	
+}
+
+ul.cssddmenu li ul li:hover {
+	background-color: #eeeeee
+}
+
+/* ITEM CONTENTS */
+
+UL.cssddmenu a {
+	text-decoration:none;
+}
+
+ul.cssddmenu li a { 
+	text-decoration:none;
+	color:#555555;
+	display:block; /**/
+	line-height:36px;
+	font-family: 'Lucida Sans Unicode', sans;
+	padding-left:1em; /**/
+}
+
+ul.cssddmenu li ul li a { /* SUBMENU MENU ITEM CONTENT */	
+	text-align:left;	
+}
+
+ul.cssddmenu li a:hover { /* MENU ITEM CONTENT ON HOVER */	
+}
+
+ul.cssddmenu li.nest a:hover {	
+}
+
+ul.cssddmenu li ul li a:hover { /* SUBMENU MENU ITEM CONTENT ON HOVER */	
+}
+
+/* SUBMENUS */
+
+ul.cssddmenu li.nest ul li ul {
+	position:relative;
+	left: 10em;
+	bottom: 36px;
+}
+
+ul.cssddmenu li ul { /* WHOLE SUBMENU NORMALLY HIDDEN */
+	visibility:hidden;	
+}
+
+ul.cssddmenu li:hover ul { /* WHOLE SUBMENU ON HOVER SHOW */
+	visibility:visible;
+}
+
+ul.cssddmenu li:hover ul li ul { /* compatibility workaround */
+	visibility:hidden;
+}
+
+ul.cssddmenu li ul li:hover ul { /* compatibility workaround */
+	visibility:visible;
+}
