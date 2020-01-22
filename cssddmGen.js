@@ -1,4 +1,4 @@
-DDMenuItem = function(label, url) {
+var DDMenuItem = JSClass.Extends(XBBaseClass, function(label, url) {
 	DDMenuItem.baseConstructor.call(this, label, url);
 
 	// CONSTRUCTOR
@@ -12,9 +12,9 @@ DDMenuItem = function(label, url) {
 	this.anchor.href = this.url;	
 	
 	this.domelement.appendChild(this.anchor);	
-};
+});
 
-DDMenuList = function(rootelement, itemarray) {
+var DDMenuList = JSClass.Extends(XBBaseClass, function(rootelement, itemarray) {
 	DDMenuList.baseConstructor.call(this, rootelement, itemarray);	
 	
 	// CONSTRUCTOR
@@ -37,22 +37,12 @@ DDMenuList = function(rootelement, itemarray) {
 	}	
 		
 	this.domelement.appendChild(this.menulist);	
-};
+});
 
-DDMenu = function() {
-	DDMenu.baseConstructor.call(this);
-};
 
-DDMenu.prototype = {
-	build: function() {
-		
-	}
-}
 
-// APPLY INHERITANCE
-Extender.subclass(DDMenuItem, XBBaseClass);
-Extender.subclass(DDMenuList, XBBaseClass);
-Extender.subclass(DDMenu, XBBaseClass);
+
+
 
 // MAIN MAIN MAIN MAIN MAIN
 var ddmenuitems = Array( 
