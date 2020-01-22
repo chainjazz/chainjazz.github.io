@@ -50,7 +50,7 @@ var ddmenuhier = Array(
     new DDMenuItem("Home", "./index.html"),
     new DDMenuList(
 	new DDMenuItem("JavaScript apps", "#loopback"),
-	new Array(new DDMenuItem("Cryptography studies", "./db/"))
+	new Array(new DDMenuItem("Cryptography studies", "./db/index.html"))
     )	
 );
 
