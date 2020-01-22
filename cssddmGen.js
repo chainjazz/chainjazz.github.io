@@ -45,34 +45,13 @@ var DDMenuList = JSClass.Extends(XBBaseClass, function(rootelement, itemarray) {
 
 
 // MAIN MAIN MAIN MAIN MAIN
-var ddmenuitems = Array( 
-	 new DDMenuItem("item0", "./")
-	,new DDMenuItem("item1", "./")
-	,new DDMenuItem("item2", "./")
-	,new DDMenuItem("item3", "./")
-	,new DDMenuItem("item4", "./")
-	,new DDMenuItem("item5", "./")
-	,new DDMenuItem("item6", "./")
-	,new DDMenuItem("item7", "./")
-	,new DDMenuItem("item8", "./")
-	,new DDMenuItem("item9", "./")
-	//,new DDMenuItem("item", "./")
-);
 
 var ddmenuhier = Array(
-	ddmenuitems[0],
-	new DDMenuList( ddmenuitems[1], Array(
-		ddmenuitems[2],
-		ddmenuitems[3])
-	),
-	ddmenuitems[4],
-	new DDMenuList( ddmenuitems[5], Array(
-		ddmenuitems[6],
-		new DDMenuList( ddmenuitems[7], Array(
-			ddmenuitems[8])
-		), 
-		ddmenuitems[9])		
-	)	
+    new DDMenuItem("Home", "./index.html"),
+    new DDMenuList(
+	new DDMenuItem("JavaScript apps", "#loopback"),
+	new Array(new DDMenuItem("Cryptography studies", "./db/"))
+    )	
 );
 
 var ddmenustr = 0;
